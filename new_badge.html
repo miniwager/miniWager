@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>MiniWager: Crypto</title>
+      <meta name="description" content="Play games win eth">
+      <meta name="author" content="miniwager">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="css/styles.css?v=1.0">
+      <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+      <![endif]-->
+   </head>
+   <style>
+      * {
+      padding: 0;
+      margin: 0;
+      outline: 0;
+      }
+      @font-face {
+      font-family: 'book-medium';
+      src: url('style/fonts/CircularStd-Medium/CircularStd-Medium.eot'); /* IE9 Compat Modes */
+      src: url('style/fonts/CircularStd-Medium/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('style/fonts/CircularStd-Medium/CircularStd-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+      url('style/fonts/CircularStd-Medium/CircularStd-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+      url('style/fonts/CircularStd-Medium/CircularStd-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+      url('style/fonts/CircularStd-Medium/CircularStd-Medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+      }
+      @font-face {
+      font-family: 'book-reg';
+      src: url('style/fonts/CircularStd-Book/CircularStd-Book.eot'); /* IE9 Compat Modes */
+      src: url('style/fonts/CircularStd-Book/CircularStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('style/fonts/CircularStd-Book/CircularStd-Book.woff2') format('woff2'), /* Super Modern Browsers */
+      url('style/fonts/CircularStd-Book/CircularStd-Book.woff') format('woff'), /* Pretty Modern Browsers */
+      url('style/fonts/CircularStd-Book/CircularStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+      url('style/fonts/CircularStd-Book/CircularStd-Book.svg#svgFontName') format('svg'); /* Legacy iOS */
+      }
+      .container {
+      background-image: url(img/bg_red.png);
+      background-size: cover;
+      height: 100vh;
+      background-repeat: no-repeat;
+      }
+      #welcome_screen {
+      }
+      .nav_right {
+      float: right;
+      }
+      .nav_right a {
+      text-decoration: none;
+      color: #A5ADB7;
+      }
+      .mobile_container {
+      width:375px;
+      height: 667px;
+      margin: 0 auto;
+      display: block;
+      font-family: 'buttons', sans-serif;
+      z-index: 2;
+      }
+      #welcome_logo  {
+      width: 100%;
+      background-image: url("img/bubbles.png");
+      background-size: cover;
+      height: 280px;
+      position: relative
+      }
+      .profile_picture img {
+      margin: 0 auto;
+      display: block;
+      width: 130px;
+      border: 16px solid white;
+      background: white;
+      border-radius: 100px;
+      top: 80px;
+      position: relative;
+      box-shadow: 0 6px 26px rgba(50,50,93,.11), 0 3px 13px rgba(0,0,0,.08);
+      }
+      #welcome_logo #confetti {
+      margin: 0 auto;
+      display: block;
+      width: 130px;
+      }
+      #welcome_message_container {
+      text-align: center;
+      color:#1E314A;
+      width: 100%;
+      }
+      .mobile_content {
+      padding: 16px;
+      }
+      #signin_form_container h3 {
+      padding: 0px 0 0px;
+      color: white;
+      font-weight: bold;
+      font-size: 44px;
+      text-align: center;
+      }
+      #signin_form_container p {
+      padding: 24px 0 0px;
+      color: white;
+      line-height: 28px;
+      text-align: center;
+      }
+      #welcome_button_container {
+      width: 100%;
+      padding: 50px 0 0;
+      }
+      #signin_form_container {
+      height: 300px;
+      width: 100%;
+      }
+      input {
+      background: white;
+      border: none;
+      padding: 16px 0;
+      border-radius: 35px;
+      color: #6565FF;
+      font-size: 16px;
+      width:100%;
+      margin-top: 20px;
+      box-shadow: 0 6px 26px rgba(50,50,93,.11), 0 3px 13px rgba(0,0,0,.08);
+      padding-left: 20px;
+      box-sizing: border-box;
+      -webkit-appearance:none;
+      }
+      #or_input {
+      text-align: center;
+      padding: 10px 0 0;
+      color:#BBC1C8;
+      }
+      #terms_conditions {
+      width: 60%;
+      margin: 0 auto;
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      }
+      #sign_in_submit {
+      background: #6565FF;
+      border: none;
+      padding: 16px 24px;
+      border-radius: 35px;
+      color: white;
+      font-size: 16px;
+      width:100%;
+      margin-top: 20px;
+      box-shadow: 0 6px 26px rgba(50,50,93,.11), 0 3px 13px rgba(0,0,0,.08);
+      }
+      #terms_conditions a {
+      color:#6565FF;
+      font-weight: bold;
+      }
+      @media(max-width:980px){
+      .profile_picture img {
+      padding:0;
+      top:0;
+      }
+      #welcome_logo {
+      height: 180px;
+      }
+      }
+      #welcome_button_container #signup {
+      background: #6565FF;
+      border: none;
+      padding: 16px 24px;
+      border-radius: 35px;
+      color: white;
+      font-size: 16px;
+      width: 34%;
+      margin-right: 2%;
+      float: left;
+      box-shadow: 0 6px 26px rgba(50,50,93,.11), 0 3px 13px rgba(0,0,0,.08);
+      box-sizing: padding-box;
+      text-align: center;
+      text-decoration: none;
+      }
+      #welcome_button_container #signin {
+      background: #6565FF;
+      border: none;
+      padding: 16px 24px;
+      border-radius: 35px;
+      color: white;
+      font-size: 16px;
+      width: 34%;
+      margin-left: 2%;
+      float: left;
+      box-shadow: 0 6px 26px rgba(50,50,93,.11), 0 3px 13px rgba(0,0,0,.08);
+      box-sizing: padding-box;
+      text-align: center;
+      text-decoration: none;
+      }
+   </style>
+   <body>
+      <div class='container'>
+         <div id="newbadge">
+            <div class="mobile_container">
+               <div class="mobile_content">
+                  <a href="index.html"><img src="img/Back.png" id="logo"></a>
+                  <div id="welcome_logo">
+                     <div class="profile_picture"><a href="settings.html"><img src="img/medal2.png"></a></div>
+                  </div>
+                  <div id="signin_form_container">
+                     <h3>Congrats</h3>
+                     <p>You have Unlocked the New Badge!<br>
+                        .01 ETH added to your account
+                     </p>
+                     <div id="welcome_button_container">
+                        <a id="signup" href="sign_up.html">View All</a>
+                        <a id="signin" href="sign_in.html">Home</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/scripts.js"></script>
+   </body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>MiniWager: Crypto</title>
+      <meta name="description" content="Play games and bet eth on them p2p">
+      <meta name="author" content="miniwager">
+      <meta name="viewport" content="width=device-width">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="styles/default.css">
+   </head>
+   <body>
+      <div class='container'>
+         <div id="wallet">
+            <div class="wallet">
+               <div class="desktop_content">
+                  <div class="sub_header">
+                     <a href="index.html"><img src="img/Back.png" id="logo"></a>
+                     <div id="navToggle">menu</div>
+                     <div id="navToggled">menu</div>
+                     <ul class="nav_right">
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="settings.html">Help</a></li>
+                        <li><a href="settings.html">Log out</a></li>
+                     </ul>
+                  </div>
+                  <div class="header_content">
+                     <div class="profile_container">
+                        <div class="profile_content">
+                           <div class="profile_picture"><a href="settings.html"><img src="img/placeholder_user.png"></a></div>
+                           <div class="profile_info">
+                              <div class="profile_usernamer">
+                                 <p>UserName89</p>
+                              </div>
+                              <div class="profile_achievements">
+                                 <ul id="profile_list">
+                                    <li class="achievement"><img src="img/medal1.png"></li>
+                                    <li class="achievement"><img src="img/medal2.png"></li>
+                                    <li class="achievement"><img src="img/medal3.png"></li>
+                                    <li class="achievement"><img src="img/medal4.png"></li>
+                                 </ul>
+                              </div>
+                              <a href="wallet.html">
+                                 <div class="profile_balance">
+                                    <p>10.324 ETH</p>
+                                 </div>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="desktop_page_content">
+                     <div class="page_content_header">
+                        <h4>User Wallet</h4>
+                     </div>
+                     <div class="page_content_container">
+                        <ul class="account_settings">
+                           <li>
+                              <a class="tablinks" id="openTab" onclick="openTab(event, 'deposit')">
+                                 <div class="account_content">
+                                    <div class="settings_icon"><img src="img/icon_money.png"></div>
+                                    <div class="settings_name">
+                                       <p>Deposit</p>
+                                    </div>
+                                    <div class="settings_arrow">
+                                       <p>></p>
+                                    </div>
+                                 </div>
+                           </li>
+                           <li><a class="tablinks " onclick="openTab(event, 'withdraw')">
+                           <div class="account_content">
+                           <div class="settings_icon"><img src="img/icon_check.png"></div>
+                           <div class="settings_name"><p>Withdraw</p></div>
+                           <div class="settings_arrow"><p>></p></div>
+                           </div></a>
+                           </li>
+                           <li>
+                              <a class="tablinks" onclick="openTab(event, 'buy')">
+                                 <div class="account_content">
+                                    <div class="settings_icon"><img src="img/icon_key.png"></div>
+                                    <div class="settings_name">
+                                       <p>Buy Eth Here</p>
+                                    </div>
+                                    <div class="settings_arrow">
+                                       <p>></p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                           <li>
+                              <a class="tablinks" onclick="openTab(event, 'history')">
+                                 <div class="account_content">
+                                    <div class="settings_icon"><img src="img/icon_money2.png"></div>
+                                    <div class="settings_name">
+                                       <p>History / Pending</p>
+                                    </div>
+                                    <div class="settings_arrow">
+                                       <p>></p>
+                                    </div>
+                                 </div>
+                              </a>
+                           </li>
+                        </ul>
+                        <div id="wallet_content_area" >
+                           <div id="withdraw" class="tabcontent active">
+                              <h3>Send Eth to this adress</h3>
+                              <form>
+                                 <input type="text" name="Adress" placeholder="Your Eth Adress">
+                                 <input type="submit" id="sign_in_submit" value="Withdraw">
+                              </form>
+                           </div>
+                           <div id="deposit" class="tabcontent">
+                              <h3>Send Eth to this adress</h3>
+                              <p>0x0A94A9B2A9ae04C2<br>9225dF9f8940c3a142DfbAd5</p>
+                           </div>
+                           <div id="buy" class="tabcontent">
+                              <h3>Buy ETH here</h3>
+                              <p>paypal, visa, BTC</p>
+                           </div>
+                           <div id="history" class="tabcontent">
+                              <h3>History</h3>
+                              <p>53 ETH pending (4 of 45 blocks confirmed) </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="scripts/scripts.js"></script>
+   </body>
+</html>
